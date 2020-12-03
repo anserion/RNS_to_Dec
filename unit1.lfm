@@ -1,0 +1,214 @@
+object Form1: TForm1
+  Left = 430
+  Height = 560
+  Top = 57
+  Width = 1018
+  AutoSize = True
+  BorderStyle = bsSingle
+  BorderWidth = 5
+  Caption = 'Оптимизация метода ортогональных базисов для перевода чисел из СОК в ПСС (Ионисян А.С.)'
+  ClientHeight = 560
+  ClientWidth = 1018
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  Scaled = False
+  object Label1: TLabel
+    Left = 128
+    Height = 14
+    Top = 368
+    Width = 508
+    Caption = 'Содержимое ПЗУ (остатки от деления псевдоортогональных чисел на диапазон)'
+    ParentColor = False
+  end
+  object Label_P: TLabel
+    Left = 128
+    Height = 14
+    Top = 8
+    Width = 95
+    Caption = 'Диапазон СОК:'
+    ParentColor = False
+  end
+  object SG_sum1: TStringGrid
+    Left = 128
+    Height = 52
+    Top = 159
+    Width = 488
+    DefaultColWidth = 96
+    FixedRows = 0
+    RowCount = 2
+    ScrollBars = ssNone
+    TabOrder = 0
+  end
+  object SG_sum2: TStringGrid
+    Left = 128
+    Height = 52
+    Top = 231
+    Width = 294
+    ColCount = 3
+    DefaultColWidth = 96
+    FixedRows = 0
+    RowCount = 2
+    ScrollBars = ssNone
+    TabOrder = 1
+  end
+  object SG_sum3: TStringGrid
+    Left = 128
+    Height = 52
+    Top = 303
+    Width = 200
+    ColCount = 2
+    DefaultColWidth = 96
+    FixedRows = 0
+    RowCount = 2
+    ScrollBars = ssNone
+    TabOrder = 2
+  end
+  object SG_sum0: TStringGrid
+    Left = 128
+    Height = 32
+    Top = 103
+    Width = 872
+    ColCount = 9
+    DefaultColWidth = 96
+    FixedRows = 0
+    RowCount = 1
+    ScrollBars = ssNone
+    TabOrder = 3
+  end
+  object SG_P_X: TStringGrid
+    Left = 128
+    Height = 52
+    Top = 24
+    Width = 872
+    ColCount = 9
+    DefaultColWidth = 96
+    FixedRows = 0
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 2
+    ScrollBars = ssNone
+    TabOrder = 4
+  end
+  object SG_ROM: TStringGrid
+    Left = 128
+    Height = 168
+    Top = 384
+    Width = 880
+    ColCount = 9
+    DefaultColWidth = 96
+    RowCount = 2
+    ScrollBars = ssVertical
+    TabOrder = 5
+  end
+  object Label4: TLabel
+    Left = 128
+    Height = 14
+    Top = 88
+    Width = 114
+    Caption = 'Извлечено из ПЗУ'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 128
+    Height = 14
+    Top = 143
+    Width = 135
+    Caption = 'Сумма и коррекция 1'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 128
+    Height = 14
+    Top = 215
+    Width = 135
+    Caption = 'Сумма и коррекция 2'
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 128
+    Height = 14
+    Top = 287
+    Width = 135
+    Caption = 'Сумма и коррекция 3'
+    ParentColor = False
+  end
+  object Edit_res: TEdit
+    Left = 432
+    Height = 27
+    Top = 327
+    Width = 184
+    ReadOnly = True
+    TabOrder = 6
+    Text = '0'
+  end
+  object Label8: TLabel
+    Left = 344
+    Height = 14
+    Top = 333
+    Width = 79
+    Caption = 'Число в ПСС:'
+    ParentColor = False
+  end
+  object BTN_ROM_read: TButton
+    Left = 8
+    Height = 25
+    Top = 103
+    Width = 112
+    Caption = 'Извлечь из ПЗУ'
+    OnClick = BTN_ROM_readClick
+    TabOrder = 7
+  end
+  object BTN_sum1: TButton
+    Left = 8
+    Height = 25
+    Top = 159
+    Width = 112
+    Caption = 'Суммировать'
+    OnClick = BTN_sum1Click
+    TabOrder = 8
+  end
+  object BTN_sum2: TButton
+    Left = 8
+    Height = 25
+    Top = 231
+    Width = 112
+    Caption = 'Суммировать'
+    OnClick = BTN_sum2Click
+    TabOrder = 9
+  end
+  object BTN_sum3: TButton
+    Left = 8
+    Height = 25
+    Top = 303
+    Width = 112
+    Caption = 'Суммировать'
+    OnClick = BTN_sum3Click
+    TabOrder = 10
+  end
+  object BTN_P_set: TButton
+    Left = 8
+    Height = 25
+    Top = 24
+    Width = 112
+    Caption = 'Основания СОК'
+    OnClick = BTN_P_setClick
+    TabOrder = 11
+  end
+  object BTN_X_set: TButton
+    Left = 8
+    Height = 25
+    Top = 51
+    Width = 112
+    Caption = 'Число в СОК'
+    OnClick = BTN_X_setClick
+    TabOrder = 12
+  end
+  object BTN_quick: TButton
+    Left = 8
+    Height = 26
+    Top = 327
+    Width = 112
+    Caption = 'Быстрый расчет'
+    OnClick = BTN_quickClick
+    TabOrder = 13
+  end
+end
