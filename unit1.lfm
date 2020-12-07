@@ -16,8 +16,8 @@ object Form1: TForm1
     Left = 128
     Height = 14
     Top = 368
-    Width = 508
-    Caption = 'Содержимое ПЗУ (остатки от деления псевдоортогональных чисел на диапазон)'
+    Width = 464
+    Caption = 'Содержимое ПЗУ (остатки от деления ортогональных чисел на диапазон)'
     ParentColor = False
   end
   object Label_P: TLabel
